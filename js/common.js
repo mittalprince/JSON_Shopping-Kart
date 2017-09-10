@@ -38,6 +38,7 @@ function add_to_cart(productId){
 
     localStorage.setItem('Cart', JSON.stringify(cart))
     fetch_cart();
+    display_catalog();
 }
 
 function remove_from_cart(productId){
@@ -52,4 +53,5 @@ function remove_from_cart(productId){
 
     localStorage.setItem('Cart', JSON.parse(cart))
     fetch_cart();
+    display_catalog()
 }
