@@ -13,12 +13,17 @@ function display_catalog(){
                  src=http://via.placeholder.com/300x300/$\{product.color}?text=$\{product.name}">
                  <div class="product-data">
                  <div> ${product.price}</div>
-                 <button class="btn btn-outline-primary">Add to Cart</button>
+                 <button class="btn btn-outline-primary" onclick="add(${product.id}">Add to Cart</button>
                  <span>${cart_qty} in Cart</span>
                 </div>
                </div>`)
         )
     }
+}
+
+function add(productid){
+    add_to_cart(productid);
+    display_catalog();
 }
 
 $(function(){
