@@ -6,7 +6,7 @@ function display_cart(){
     cart_table.append($(`
         <thead> 
             <tr>
-                <th>Product Id.</th>
+                <th>Product Id</th>
                 <th>Product Name</th>
                 <th>Quantity</th>
                 <th>Price</th>
@@ -23,9 +23,9 @@ function display_cart(){
                 <td>${product}</td>
                 <td>${catalog[product].name}</td>
                 <td>
-                    <i onclick="remove_from_cart(product)" class = "fa fa-minus-circle icn"></i>
+                    <i onclick="remove_from_cart(${product})" class = "fa fa-minus-circle icn"></i>
                     ${cart[product]}
-                    <i onclick="add_to_cart(product)" class="fa fa-plus ciircle icn"></i>
+                    <i onclick="add_to_cart(${product})" class="fa fa-plus-circle icn"></i>
                 </td>
                 <td>${catalog[product].price}</td>
                 <td>${catalog[product].price * cart[product]}</td>

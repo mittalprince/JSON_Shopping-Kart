@@ -51,7 +51,7 @@ function remove_from_cart(productId){
         }
     }
 
-    localStorage.setItem('Cart', JSON.parse(cart))
+    localStorage.setItem('Cart', JSON.stringify(cart))
     fetch_cart();
-    display_catalog()
+    display_catalog();
 }
