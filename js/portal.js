@@ -10,7 +10,7 @@ function display_catalog(){
         catalog_container.append(
             $(`<div class="col-4 p-3">
                 <img class="img-thumbnail"
-                 src=http://via.placeholder.com/300x300/${product.color}?text=${product.name}">
+                 src=http://via.placeholder.com/300x300/${product.color}?text=${product.name}>
                  <div class="product-data">
                  <div> Rs. ${product.price}</div>
                  <button class="btn btn-outline-primary" onclick="add_to_cart(${product.id}">Add to Cart</button>
