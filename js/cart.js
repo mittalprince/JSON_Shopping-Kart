@@ -1,5 +1,17 @@
 // js for shopping cart
 
+function add(productId) {
+    add_to_cart(productId);
+    display_cart();
+}
+
+function remove(productId) {
+    remove_from_cart(productId);
+    display_cart();
+}
+
+
+
 function display_cart(){
     let cart_table = $('#cart_table')
     cart_table.empty()
@@ -23,9 +35,9 @@ function display_cart(){
                 <td>${product}</td>
                 <td>${catalog[product].name}</td>
                 <td>
-                    <i onclick="remove_from_cart(${product})" class = "fa fa-minus-circle icn"></i>
+                    <i onclick="remove(${product})" class = "fa fa-minus-circle icn"></i>
                     ${cart[product]}
-                    <i onclick="add_to_cart(${product})" class="fa fa-plus-circle icn"></i>
+                    <i onclick="add(${product})" class="fa fa-plus-circle icn"></i>
                 </td>
                 <td>${catalog[product].price}</td>
                 <td>${catalog[product].price * cart[product]}</td>

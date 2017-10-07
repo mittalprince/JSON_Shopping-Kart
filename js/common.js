@@ -34,17 +34,18 @@ function add_to_cart(productId){
     }
     else{
         cart[productId]=1;
-    }
+    } 
 
     localStorage.setItem('Cart', JSON.stringify(cart))
     fetch_cart();
+    display_cart();
     display_catalog();
 }
 
 function remove_from_cart(productId){
     if(cart[productId]){
         if(cart[productId] <=1){
-            cart[productId]=1;
+           delete cart[productId];
         }
         else{
             cart[productId]--;
@@ -53,5 +54,4 @@ function remove_from_cart(productId){
 
     localStorage.setItem('Cart', JSON.stringify(cart))
     fetch_cart();
-    display_catalog();
 }
